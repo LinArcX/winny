@@ -5,15 +5,22 @@
 - [qView](www.github.com/jurplel/qView)
 
 ### Essential
-  7zip    
-  git
-  libreoffice
-  mpv
-  python
-  rufus
-  sumatrapdf
-  uget
-  vscode   
+- chocolatey
+- git
+- neovim
+- mpv
+- vifm
+- firefox
+- 7zip    
+- python
+- autohotkey
+- uget
+- transmission
+- sumatrapdf
+- libreoffice
+- rufus
+- sqlitebrowser
+- postman
 
 ## PowerShell
 - Create new alias:
@@ -24,3 +31,6 @@
 
 - Add new variable to environment variables list:
 $env:Path += ";C:\tools\neovim\Neovim\bin" 
+
+- Refresh environment variables without close terminal:
+`refreshenv`
