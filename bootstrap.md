@@ -6,20 +6,22 @@
 
 ### Essential
 - chocolatey
+- unar
+- 7zip    
 - git
 - neovim
-- mpv
 - vifm
+- mpv
+- musikcube
 - firefox
-- 7zip    
 - python
-- autohotkey
 - uget
 - transmission
 - sumatrapdf
+- autohotkey
 - libreoffice
-- rufus
 - sqlitebrowser
+- rufus
 - postman
 
 ## PowerShell
