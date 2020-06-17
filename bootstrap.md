@@ -1,5 +1,4 @@
-### Best applications
-
+## Best applications
 ### Image viewer
 - [quick-picture-viewer](www.github.com/ModuleArt/quick-picture-viewer)
 - [qView](www.github.com/jurplel/qView)
@@ -25,8 +24,22 @@
 - postman
 
 ## PowerShell
+- Create per-user config file for powershell:
+`New-Item $profile -Type File -Force`
+It will create a file called `Microsoft.PowerShell_profile.ps1` here:
+`C:\Users\<user-name>\Documents\PowerShell   
+
+You can open it like this:
+`nvim $profile`
+
 - Create new alias:
 `new-alias grep findstr`
+
+- Create new symlink:
+`new-item -itemtype symboliclink -path <path to location> -name <the name> -value <path to target>`
+
+For example to create symlink to $profile to current directory:
+`new-item -itemtype symboliclink -path . -name .profile -value C:\Users\saeed\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
 
 - FullScree current window:
 `mode 300`
@@ -36,3 +49,5 @@ $env:Path += ";C:\tools\neovim\Neovim\bin"
 
 - Refresh environment variables without close terminal:
 `refreshenv`
+
+## Services
