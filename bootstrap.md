@@ -2,6 +2,12 @@
 Default user directory is here:
 `C:\Users\<user-name>`
 
+## Tor
+- `git clone https://github.com/r0oth3x49/Tor`
+- `python -m pip install --upgrade pip` 
+- `pip install PySocks  colorama requests`
+- `python .\tor_services.py`
+
 ## Chocolatey
 As of version 0.9.8.24, binaries, libraries and Chocolatey components install in C:\ProgramData\chocolatey (environment variable %ProgramData%) by default.
 
