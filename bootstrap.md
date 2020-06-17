@@ -48,6 +48,9 @@ You can open it like this:
 - Create new alias:
 `new-alias grep findstr`
 
+- Create shortcut:
+set-shortcut "D:\winny\p.lnk" "C:\Users\saeed\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" 
+
 - Create new symlink:
 `new-item -itemtype symboliclink -path <path to location> -name <the name> -value <path to target>`
 
@@ -64,7 +67,7 @@ $env:Path += ";C:\tools\neovim\Neovim\bin"
 `refreshenv`
 
 - Move file to a directory:
-Move-Item -Path <source-file> -Destination <dest-directory>  
+`Move-Item -Path <source-file> -Destination <dest-directory>`
 
 ## Services
 Search for a service:
