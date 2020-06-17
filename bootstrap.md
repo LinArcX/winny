@@ -63,4 +63,12 @@ $env:Path += ";C:\tools\neovim\Neovim\bin"
 - Refresh environment variables without close terminal:
 `refreshenv`
 
+- Move file to a directory:
+Move-Item -Path <source-file> -Destination <dest-directory>  
+
 ## Services
+Search for a service:
+` Get-Service  | grep Event`
+
+Start Service:
+`Start-Service EventLog`
