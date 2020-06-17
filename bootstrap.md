@@ -1,3 +1,10 @@
+## Windows basic
+Default user directory is here:
+`C:\Users\<user-name>`
+
+## Chocolatey
+As of version 0.9.8.24, binaries, libraries and Chocolatey components install in C:\ProgramData\chocolatey (environment variable %ProgramData%) by default.
+
 ## Best applications
 ### Image viewer
 - [quick-picture-viewer](www.github.com/ModuleArt/quick-picture-viewer)
