@@ -51,6 +51,12 @@ As of version 0.9.8.24, binaries, libraries and Chocolatey components install in
 - rufus
 - postman
 
+## Mange .config files under git
+Unlike Unix based systems that you can create symlinks to files, in windows symlinks not working. Also create shortcut files(.lnk) won't help you.(beause it known as link file not a real file) 
+
+The best way to keep track of your .config files is to create hardlink. For example, if you want to keep track of your nvim config file just create a hardlink for it:
+`new-item -itemtype HardLink -path C:\Users\saeed\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
+
 ## PowerShell
 - Create per-user config file for powershell:
 `New-Item $profile -Type File -Force`
