@@ -6,3 +6,5 @@ You should put it's shortcut here:
 `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
 To do that, type: Win+R and type: `shell:startup`
+
+# Default Shortcuts
