@@ -11,3 +11,36 @@ To do that, type: Win+R and type: `shell:startup`
 
 # Create symbolic links
 `New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+
+# Applications
+7zip
+autohotkey
+chocolatey
+chocolatey-core.extension
+chocolatey-windowsupdate.extension
+DotNet4.5
+Far
+Firefox
+git
+gsudo
+KB2919355 
+KB2919442 
+KB2999226  
+KB3033929
+KB3035131  
+KB3118401
+libreoffice-fresh
+mpv
+musikcube
+neovim
+postman
+powershell-core
+python
+rufus
+skype
+sqlitebrowser
+sumatrapdf
+transmission
+uget
+unar
+vcredist140
