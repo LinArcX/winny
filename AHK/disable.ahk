@@ -1,2 +1,0 @@
-LWin::return
-RWin::return
