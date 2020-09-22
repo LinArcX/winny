@@ -8,3 +8,6 @@ You should put it's shortcut here:
 To do that, type: Win+R and type: `shell:startup`
 
 # Default Shortcuts
+
+# Create symbolic links
+`New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
