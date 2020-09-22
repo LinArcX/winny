@@ -1,2 +1,2 @@
-﻿#f1::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+﻿!b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
 #NoTrayIcon

@@ -1,2 +1,2 @@
-﻿#f::run, "C:\Program Files\Far Manager\Far.exe"
+﻿!f::run, "C:\Program Files\Far Manager\Far.exe"
 #NoTrayIcon
