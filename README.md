@@ -16,19 +16,12 @@ To do that, type: Win+R and type: `shell:startup`
 7zip
 autohotkey
 chocolatey
-chocolatey-core.extension
-chocolatey-windowsupdate.extension
-DotNet4.5
 Far
 Firefox
 git
 gsudo
-KB2919355 
-KB2919442 
-KB2999226  
-KB3033929
-KB3035131  
-KB3118401
+imageglass
+lavfilters
 libreoffice-fresh
 mpv
 musikcube
@@ -43,4 +36,15 @@ sumatrapdf
 transmission
 uget
 unar
+
+# Maybe needed
+chocolatey-core.extension
+chocolatey-windowsupdate.extension
+DotNet4.5
 vcredist140
+KB2919355 
+KB2919442 
+KB2999226  
+KB3033929
+KB3035131  
+KB3118401

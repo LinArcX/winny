@@ -1,25 +1,5 @@
-﻿; f=far
-!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
-#NoTrayIcon
-
-; b=firefox
-!b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
-#NoTrayIcon
-
-; e=nvim
-!e::run, "C:\tools\neovim\Neovim\bin\nvim.exe"
-#NoTrayIcon
-
-!p::
-    run, "C:\Program Files\PowerShell\7\pwsh.exe"
-    SendInput, {Esc}cls{Enter}
-    SetWorkingDir, D:\
-Return
-#NoTrayIcon
-
+﻿#Persistent
 ; maximize special windows
-#Persistent
-
 SetTitleMatchMode, 2 ;A window's title can contain WinTitle anywhere inside
 
 GroupAdd, WinMaximize, ahk_class Notepad
@@ -44,8 +24,28 @@ IfWinActive, ahk_group WinMaximize
 }
 Return
 
+; f=far
+!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
+#NoTrayIcon
+
+; b=firefox
+!b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+#NoTrayIcon
+
+; e=nvim
+!e::run, "C:\tools\neovim\Neovim\bin\nvim.exe"
+#NoTrayIcon
+
+!p::
+    run, "C:\Program Files\PowerShell\7\pwsh.exe"
+    SetWorkingDir, D:\
+Return
+#NoTrayIcon
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;SendInput, {Esc}cls{Enter}
 ;Send cls{Enter}
+
 ;!p::run, "C:\Program Files\PowerShell\7\pwsh.exe ; cd C:\"
 ;+Up::WinMaximize, A
 ;+Down::WinRestore, A
