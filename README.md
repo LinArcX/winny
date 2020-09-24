@@ -8,16 +8,16 @@
 - Switch to it:
 `cd $env:LOCALAPPDATA`
 
-## Mange .config files under git
+# Manage .config files under git
 Unlike *nix-based systems that you can create symlinks, in windows symlinks don't work.
 Also create shortcut files(.lnk) won't help you.(beause it known as link file not a real file) 
 
 The best way to keep track of your `.config files` is to create **hardlink**.
 For example, if you want to keep track of your nvim config file just create a hardlink for it:
 
-`new-item -itemtype HardLink -path C:\Users\saeed\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
+`new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
 
-## Services
+# Services
 Search for a service:
 ` Get-Service  | grep Event`
 
@@ -84,13 +84,13 @@ C:\Tor\tor.exe --service remove
 `new-alias grep findstr`
 
 - Create shortcut:
-set-shortcut "D:\winny\p.lnk" "C:\Users\saeed\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" 
+set-shortcut "D:\winny\p.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" 
 
 - Create new symlink:
 `new-item -itemtype symboliclink -path <path to location> -name <the name> -value <path to target>`
 
 For example to create symlink to $profile to current directory:
-`new-item -itemtype symboliclink -path . -name .profile -value C:\Users\saeed\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
+`new-item -itemtype symboliclink -path . -name .profile -value C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
 
 - FullScree current window:
 `mode 300`
@@ -104,23 +104,23 @@ $env:Path += ";C:\tools\neovim\Neovim\bin"
 - Move file to a directory:
 `Move-Item -Path <source-file> -Destination <dest-directory>`
 
-Alt+F7: Clears the command history.
-Ctrl+C: Break out of the subprompt or terminate execution.
-Ctrl + End : Delete all the characters in the line after the cursor.
-Ctrl + Left Arrow || Ctrl + Right Arrow : Move left or right one word at a time.
-Ctrl + S: Pause||resume the display of output.
-Esc Clear the current line.
-F1 Moves the cursor one character to the right on the command line. At the end of the line, inserts one character from the text of your last command.
-F2 Creates a new command line by copying your last command line up to the character you type.
-F3 Completes the command line with the content from your last command line, starting from the current cursor position to the end of the line.
-F4 Deletes characters from your current command line, starting from the current cursor position up to the character you type.
-F5 Scans backward through your command history.
-F7: Similar to get-history. Displays a pop-up window with your command history and allows you to select a command. Use the arrow keys to scroll through the list. Press Enter to select a command to run, or press the Right arrow to place the text on the command line.
-F8 Uses text you’ve entered to scan backward through your command history for commands that match the text you’ve typed so far on the command line.
-F9 Runs a specific numbered command from your command history. Command numbers are listed when you press F7 or get-history.
-Page Up / Page Down: Gets the first/last command in the command history.
-Right-click If QuickEdit is disabled, displays an editing shortcut menu with Mark, Copy, Paste, Select All, Scroll, and Find options. To copy the screen buffer to the Clipboard, right-click, choose Select, and then press Enter.
-Tab / Shift+Tab: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
+- `Alt+F7`: Clears the command history.
+- `Ctrl+C`: Break out of the subprompt or terminate execution.
+- `Ctrl` + End : Delete all the characters in the line after the cursor.
+- Ctrl + Left Arrow || Ctrl + Right Arrow : Move left or right one word at a time.
+- Ctrl + S: Pause||resume the display of output.
+- Esc Clear the current line.
+- F1 Moves the cursor one character to the right on the command line. At the end of the line, inserts one character from the text of your last command.
+- F2 Creates a new command line by copying your last command line up to the character you type.
+- F3 Completes the command line with the content from your last command line, starting from the current cursor position to the end of the line.
+- F4 Deletes characters from your current command line, starting from the current cursor position up to the character you type.
+- F5 Scans backward through your command history.
+- F7: Similar to get-history. Displays a pop-up window with your command history and allows you to select a command. Use the arrow keys to scroll through the list. Press Enter to select a command to run, or press the Right arrow to place the text on the command line.
+- F8 Uses text you’ve entered to scan backward through your command history for commands that match the text you’ve typed so far on the command line.
+- F9 Runs a specific numbered command from your command history. Command numbers are listed when you press F7 or get-history.
+- Page Up / Page Down: Gets the first/last command in the command history.
+- Right-click If QuickEdit is disabled, displays an editing shortcut menu with Mark, Copy, Paste, Select All, Scroll, and Find options. To copy the screen buffer to the Clipboard, right-click, choose Select, and then press Enter.
+- Tab / Shift+Tab: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
 
 # Applications
 ## Necessary
