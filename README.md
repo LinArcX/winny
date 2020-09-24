@@ -95,6 +95,13 @@ https://www.torproject.org/dist/torbrowser/10.0/tor-win32-0.4.3.6.zip
     `netstat -aon | findstr ":9050"`
 
 # PowerShell
+Powershell is a shell, scripting language that has a package manager.
+
+## Less
+You should install `pscx` package:
+
+`Find-Package pscx | Install-Package -Force -AllowClobber` 
+
 ## List of all installed packages
 `Get-AppxPackage | Select Name, PackageFullName`
 
@@ -224,14 +231,13 @@ Build Tools:
 - [ ] ranger
 - [ ] htop
 
-## Other
+# Other
 Don't install these applications via chocolately:
 - cygwin
 - games
 
 Don't install these apps ever:
 - steam
-
 
 # TODO
 ## Packages
@@ -260,6 +266,8 @@ Install via choco:
 - https://ss64.com/ps/syntax-env.html
 
 # Garbage
+- FullScree current window:
+`mode 300`
 Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
 
 ## Will install as dependencies
@@ -275,6 +283,3 @@ Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
 - KB3033929
 - KB3035131  
 - KB3118401
-
-- FullScree current window:
-`mode 300`
