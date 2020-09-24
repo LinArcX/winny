@@ -12,61 +12,69 @@
 - To start an application at start-up, you should put it's shortcut here:
 
     `C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
     To do that, hit: `Win+R` and type: `shell:startup`
 
 ## SymLinks, HardLinks, ShortCuts
-1. Create symlinks: 
+- Create symlinks: 
 
-`new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
+    `new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
 
-For example:
+    For example:
 
-`New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+    `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
-`new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
+    `new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
 
-2. Create shortcut/alias(.lnk files):
-Paste this function inside your `$profile`:
+- Create shortcut/alias(.lnk files):
+    Just paste this function inside your `$profile`:
 
-```
-function set-shortcut {
-param ( [string]$SourceLnk, [string]$DestinationPath )
-    $WshShell = New-Object -comObject WScript.Shell
-    $Shortcut = $WshShell.CreateShortcut($SourceLnk)
-    $Shortcut.TargetPath = $DestinationPath
-    $Shortcut.Save()
-}
-```
+    ```
+    function set-shortcut {
+    param ( [string]$SourceLnk, [string]$DestinationPath )
+        $WshShell = New-Object -comObject WScript.Shell
+        $Shortcut = $WshShell.CreateShortcut($SourceLnk)
+        $Shortcut.TargetPath = $DestinationPath
+        $Shortcut.Save()
+    }
+    ```
 
-And use it like this:
-`set-shortcut "D:\winny\profile.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"`
+    And use it like this:
+
+    `set-shortcut "D:\winny\profile.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"`
 
 ## Services
 Search for a service:
+
 ` Get-Service  | grep Event`
 
 Start Service:
+
 `Start-Service EventLog`
 
 # Configuring Special Software
 ## Chocolatey
 As of version 0.9.8.24, binaries, libraries and Chocolatey components will install:
+
 `C:\ProgramData\chocolatey`
 
-* (environment variable %ProgramData%) by default.
+* Environment Variable `%ProgramData%` by default.
 
 ## Tor
 - Download Tor-Expert-Bundle:
 https://www.torproject.org/dist/torbrowser/10.0/tor-win32-0.4.3.6.zip
 
 - Unzip it, and install as as service:
-`C:\Tor\tor.exe --service install`
+
+    `C:\Tor\tor.exe --service install`
 
 - To check if the service with the settings file starts (it does not contain errors), you can use this command:
-`C:\Tor\tor.exe -f "C:\Tor\torrc"`
+
+    `C:\Tor\tor.exe -f "C:\Tor\torrc"`
 
 - Now install the Tor service, which will read the settings from the C:\Tor\torrc file:
-`C:\Tor\tor.exe --service install -options -f "C:\Tor\torrc"`
+
+    `C:\Tor\tor.exe --service install -options -f "C:\Tor\torrc"`
 
 * Remember that you must specify options after the -options flag, otherwise they will be ignored.
 - To start and stop the service, use the following commands:
