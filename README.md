@@ -3,7 +3,7 @@
 - Switch to it: `cd ~`
 - Switch to root of current partition: `cd /`
 - `cd %AppData%` won't work in powershell. You should use: `cd $env:APPDATA`
-- Default config folder (equivalent to `~/.config` in *nix-based os):
+- Default config folder (equivalent to `~/.config` in __*nix-based__ os):
 
     `C:\Users\linarcx\AppData\Local`
 - Switch to it:
@@ -23,6 +23,8 @@
     For example:
 
     `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+
+    Or:
 
     `new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
 
@@ -45,11 +47,9 @@
 
 ## Services
 Search for a service:
-
-` Get-Service  | grep Event`
+`Get-Service  | grep Event`
 
 Start Service:
-
 `Start-Service EventLog`
 
 # Configuring Special Software
@@ -78,28 +78,28 @@ https://www.torproject.org/dist/torbrowser/10.0/tor-win32-0.4.3.6.zip
 
 * Remember that you must specify options after the -options flag, otherwise they will be ignored.
 - To start and stop the service, use the following commands:
-
-```
-C:\Tor\tor.exe --service start
-C:\Tor\tor.exe --service stop
-```
+    ```
+    C:\Tor\tor.exe --service start
+    C:\Tor\tor.exe --service stop
+    ```
 
 - To remove the service:
-```
-C:\Tor\tor.exe --service stop
-C:\Tor\tor.exe --service remove
-```
+    ```
+    C:\Tor\tor.exe --service stop
+    C:\Tor\tor.exe --service remove
+    ```
 
 * Note that you must first stop the service and then delete it.
-* By default, the Tor service listens on port 9050, so you can check whether it is started by a command that shows if port 9050 is listened:
-`netstat -aon | findstr ":9050"`
+* By default, the Tor service listens on port 9050.
+    So you can check whether it is started by a command that shows if port 9050 is listened:
+    `netstat -aon | findstr ":9050"`
 
 # PowerShell
-## List
+## List of all installed packages
 `Get-AppxPackage | Select Name, PackageFullName`
 
-## Remove
-`Get-AppxPackage *windowsstore* | Remove-AppxPackage`
+## Remove foo
+`Get-AppxPackage *foo* | Remove-AppxPackage`
 
 Tip: Some apps like microsoft-edge can't uninstall from your system and throw this error:
 > Remove-AppxPackage: Deployment failed with HRESULT: 0x80073CFA, Removal failed. Please contact your software vendor. (0x80073CFA)
@@ -114,6 +114,7 @@ http://woshub.com/remove-appxpackage-0x80073cfa-removal-failed/
 `New-Item $profile -Type File -Force`
 
 It will create a file called `Microsoft.PowerShell_profile.ps1` here:
+
 `C:\Users\<user-name>\Documents\PowerShell`
 
 You can open it like this: `nvim $profile`
@@ -130,6 +131,7 @@ You can open it like this: `nvim $profile`
 ## Move file to a directory
 `Move-Item -Path <source-file> -Destination <dest-directory>`
 
+## Other
 - `Alt + F7`: Clears the command history.
 - `Ctrl + C`: Break out of the subprompt or terminate execution.
 - `Ctrl + End` : Delete all the characters in the line after the cursor.
