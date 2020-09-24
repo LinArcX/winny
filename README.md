@@ -1,4 +1,4 @@
-# Windows basic
+# Windows Basics
 - Default user directory: `C:\Users\<user-name>`
 - Switch to it: `cd ~`
 - Switch to root of current partition: `cd /`
@@ -8,20 +8,38 @@
 - Switch to it:
 `cd $env:LOCALAPPDATA`
 
-# Manage .config files under git
-Unlike *nix-based systems that you can create symlinks, in windows symlinks don't work.
-Also create shortcut files(.lnk) won't help you.(beause it known as link file not a real file) 
+## SymLinks, HardLinks, ShortCuts
+1. Create symlinks: 
 
-The best way to keep track of your `.config files` is to create **hardlink**.
-For example, if you want to keep track of your nvim config file just create a hardlink for it:
+`new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
+
+For example:
 
 `new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
 
-# Services
+2. Create shortcut/alias(.lnk files):
+Paste this function inside your `$profile`:
+
+```
+function set-shortcut {
+param ( [string]$SourceLnk, [string]$DestinationPath )
+    $WshShell = New-Object -comObject WScript.Shell
+    $Shortcut = $WshShell.CreateShortcut($SourceLnk)
+    $Shortcut.TargetPath = $DestinationPath
+    $Shortcut.Save()
+}
+```
+
+And use it like this:
+`set-shortcut "D:\winny\profile.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"`
+
+## Services
 Search for a service:
+
 ` Get-Service  | grep Event`
 
 Start Service:
+
 `Start-Service EventLog`
 
 # Configuring Special Software
@@ -82,15 +100,6 @@ C:\Tor\tor.exe --service remove
 
 - Create new alias:
 `new-alias grep findstr`
-
-- Create shortcut:
-set-shortcut "D:\winny\p.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" 
-
-- Create new symlink:
-`new-item -itemtype symboliclink -path <path to location> -name <the name> -value <path to target>`
-
-For example to create symlink to $profile to current directory:
-`new-item -itemtype symboliclink -path . -name .profile -value C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
 
 - FullScree current window:
 `mode 300`
@@ -195,11 +204,15 @@ Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
 
 # Tips
-## Create symbolic links
+- Create symbolic links
 `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
+- Start an application at start-up:
+You should put it's shortcut here:
 
-`set-shortcut "D:\winny\profile.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"`
+`C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+To do that, hit: `Win+R` and type: `shell:startup`
 
 ## Manage pre-installed applications
 ### List
@@ -216,14 +229,6 @@ An administrator can attempt to remove the app from the computer using Turn Wind
 
 The workaround:
 http://woshub.com/remove-appxpackage-0x80073cfa-removal-failed/
-
-## Bug.n
-### Start bug.n on system startup
-You should put it's shortcut here:
-
-`C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
-
-To do that, type: Win+R and type: `shell:startup`
 
 ## About apps
 Don't install these applications via chocolately:
