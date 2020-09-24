@@ -105,3 +105,9 @@ Shared components, tools, sdk:
 
 Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
+
+
+Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+
+# References
+https://www.thetopsites.net/article/54098567.shtml

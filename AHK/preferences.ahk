@@ -42,6 +42,8 @@ Return
 Return
 #NoTrayIcon
 
+run, "C:\Program Files\PowerShell\7\pwsh.exe"
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;SendInput, {Esc}cls{Enter}
 ;Send cls{Enter}
