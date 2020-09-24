@@ -57,11 +57,6 @@ transmission
 uget
 unar
 
-visualstudio-installer 
-visualstudio2019community
-visualstudio2019buildtools
-visualstudio2019-workload-vctools
-
 ## Maybe needed
 chocolatey-core.extension
 chocolatey-windowsupdate.extension
@@ -81,3 +76,32 @@ Don't install these applications via chocolately:
 
 Don't install these apps ever:
 - steam
+
+## Visual studio
+First install these packages via chocolatey:
+
+```
+visualstudio-installer 
+visualstudio2019community
+visualstudio2019buildtools
+visualstudio2019-workload-vctools
+```
+
+These will install these indiviaul components:(you can see them in indivual components tab in visual studio installer):
+- C++ 2019 Redistributable update
+- C++ CMake tools for windows
+- MSVC v142 - VS 2019 C++ x86/64 build tools(v14.27)
+- C++ AddressSanitizer
+- Testing tools core features - Build Tools
+- C++ Build Tools core features
+- Windows 10 SDK(10.0.18362.0)
+- Windows Universal C Runtime
+
+Packages directory:
+`C:\ProgramData\Microsoft\VisualStudio\Packages`
+
+Shared components, tools, sdk:
+`C:\Program Files (x86)\Microsoft Visual Studio\Shared`
+
+Build Tools:
+`C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
