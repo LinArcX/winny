@@ -1,9 +1,10 @@
-Tips and tricks to make windows less bloated and more productive.
+# Tips and tricks to make windows less bloated and more productive.
 
-# List of all installed software on windows
+## Manage pre-installed applications
+### List
 `Get-AppxPackage | Select Name, PackageFullName`
 
-# Remove default applications in windows
+### Remove
 `Get-AppxPackage *windowsstore* | Remove-AppxPackage`
 
 Tip: Some apps like microsoft-edge can't uninstall from your system and throw this error:
@@ -17,19 +18,20 @@ An administrator can attempt to remove the app from the computer using Turn Wind
 The workaround:
 http://woshub.com/remove-appxpackage-0x80073cfa-removal-failed/
 
-# Start bug.n on system startup
+## Bug.n
+### Start bug.n on system startup
 You should put it's shortcut here:
 
 `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
 To do that, type: Win+R and type: `shell:startup`
 
-# Default Shortcuts
+## Default Shortcuts
 
-# Create symbolic links
+## Create symbolic links
 `New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
-# Applications
+## Applications
 7zip
 autohotkey
 chocolatey
@@ -55,7 +57,12 @@ transmission
 uget
 unar
 
-# Maybe needed
+visualstudio-installer 
+visualstudio2019community
+visualstudio2019buildtools
+visualstudio2019-workload-vctools
+
+## Maybe needed
 chocolatey-core.extension
 chocolatey-windowsupdate.extension
 DotNet4.5
@@ -66,3 +73,11 @@ KB2999226
 KB3033929
 KB3035131  
 KB3118401
+
+## Tips
+Don't install these applications via chocolately:
+- cygwin
+- games
+
+Don't install these apps ever:
+- steam
