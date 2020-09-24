@@ -1,4 +1,74 @@
-# Tips and tricks to make windows less bloated and more productive.
+# Applications
+## Necessary
+7zip
+autohotkey
+chocolatey
+Far
+Firefox
+git
+gsudo
+imageglass
+lavfilters
+libreoffice-fresh
+mpv
+musikcube
+neovim
+postman
+powershell-core
+python
+rufus
+screencloud
+skype
+sqlitebrowser
+sumatrapdf
+transmission
+uget
+unar
+
+# Development
+## C/C++ Development without VisualStudio
+First install these base packages via chocolatey:
+
+```
+visualstudio-installer
+visualstudio2019community
+visualstudio2019buildtools
+visualstudio2019-workload-vctools
+```
+
+Above packages will install these indiviaul components on your machine:
+- C++ 2019 Redistributable update
+- C++ CMake tools for windows
+- MSVC v142 - VS 2019 C++ x86/64 build tools(v14.27)
+- C++ AddressSanitizer
+- Testing tools core features - Build Tools
+- C++ Build Tools core features
+- Windows 10 SDK(10.0.18362.0)
+- Windows Universal C Runtime
+Tip: You can check them in indivual components tab in visual-studio-installer.
+
+For Command-line development:
+`windows-sdk-10.1`
+
+Above package will install these indivisual components on your machine:
+- .NET Framework 4.6.1 targeting pack
+- .NET Framework 4.8 SDK
+
+For Native-Desktop development:
+`visualstudio2019-workload-nativedesktop`
+
+Packages directory:
+`C:\ProgramData\Microsoft\VisualStudio\Packages`
+
+Shared components, tools, sdk:
+`C:\Program Files (x86)\Microsoft Visual Studio\Shared`
+
+Build Tools:
+`C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
+
+# Tips
+## Create symbolic links
+`New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
 ## Manage pre-installed applications
 ### List
@@ -26,54 +96,7 @@ You should put it's shortcut here:
 
 To do that, type: Win+R and type: `shell:startup`
 
-## Default Shortcuts
-
-## Create symbolic links
-`New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
-
-## Applications
-7zip
-autohotkey
-chocolatey
-Far
-Firefox
-git
-gsudo
-imageglass
-lavfilters
-libreoffice-fresh
-mpv
-musikcube
-neovim
-postman
-powershell-core
-python
-rufus
-screencloud
-skype
-sqlitebrowser
-sumatrapdf
-transmission
-uget
-unar
-
-## Maybe needed
-chocolatey-core.extension
-chocolatey-windowsupdate.extension
-DotNet4.5
-
-vcredist140
-vcredist2013 
-vcredist2015
-
-KB2919355 
-KB2919442 
-KB2999226  
-KB3033929
-KB3035131  
-KB3118401
-
-## Tips
+## About apps
 Don't install these applications via chocolately:
 - cygwin
 - games
@@ -81,45 +104,23 @@ Don't install these applications via chocolately:
 Don't install these apps ever:
 - steam
 
-## C/C++ Development without VisualStudio
-First install these packages via chocolatey:
-
-```
-visualstudio-installer
-visualstudio2019community
-visualstudio2019buildtools
-visualstudio2019-workload-vctools
-```
-
-For Command-line development:
-`windows-sdk-10.1`
-
-For Native-Desktop development:
-`visualstudio2019-workload-nativedesktop`
-
-
-Above commands will install these indiviaul components on your machine:
-- C++ 2019 Redistributable update
-- C++ CMake tools for windows
-- MSVC v142 - VS 2019 C++ x86/64 build tools(v14.27)
-- C++ AddressSanitizer
-- Testing tools core features - Build Tools
-- C++ Build Tools core features
-- Windows 10 SDK(10.0.18362.0)
-- Windows Universal C Runtime
-
-Tip: You can check them in indivual components tab in visual-studio-installer.
-
-Packages directory:
-`C:\ProgramData\Microsoft\VisualStudio\Packages`
-
-Shared components, tools, sdk:
-`C:\Program Files (x86)\Microsoft Visual Studio\Shared`
-
-Build Tools:
-`C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
-
-Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
-
 # References
 https://www.thetopsites.net/article/54098567.shtml
+
+# Garbage
+Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+
+## Will install as dependencies
+DotNet4.5
+chocolatey-core.extension
+chocolatey-windowsupdate.extension
+vcredist140
+vcredist2013 
+vcredist2015
+KB2919355 
+KB2919442 
+KB2999226  
+KB3033929
+KB3035131  
+KB3118401
+
