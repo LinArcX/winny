@@ -1,29 +1,29 @@
 # Applications
 ## Necessary
-7zip
-autohotkey
-chocolatey
-Far
-Firefox
-git
-gsudo
-imageglass
-lavfilters
-libreoffice-fresh
-mpv
-musikcube
-neovim
-postman
-powershell-core
-python
-rufus
-screencloud
-skype
-sqlitebrowser
-sumatrapdf
-transmission
-uget
-unar
+- 7zip
+- autohotkey
+- chocolatey
+- Far
+- Firefox
+- git
+- gsudo
+- imageglass
+- lavfilters
+- libreoffice-fresh
+- mpv
+- musikcube
+- neovim
+- postman
+- powershell-core
+- python
+- rufus
+- screencloud
+- skype
+- sqlitebrowser
+- sumatrapdf
+- transmission
+- uget
+- unar
 
 # Development
 ## C/C++ Development without VisualStudio
@@ -48,6 +48,7 @@ Above packages will install these indiviaul components on your machine:
 Tip: You can check them in indivual components tab in visual-studio-installer.
 
 For Command-line development:
+
 `windows-sdk-10.1`
 
 Above package will install these indivisual components on your machine:
@@ -55,15 +56,19 @@ Above package will install these indivisual components on your machine:
 - .NET Framework 4.8 SDK
 
 For Native-Desktop development:
+
 `visualstudio2019-workload-nativedesktop`
 
 Packages directory:
+
 `C:\ProgramData\Microsoft\VisualStudio\Packages`
 
 Shared components, tools, sdk:
+
 `C:\Program Files (x86)\Microsoft Visual Studio\Shared`
 
 Build Tools:
+
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
 
 # Tips
