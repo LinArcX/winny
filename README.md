@@ -13,7 +13,6 @@
 - mpv
 - musikcube
 - neovim
-- postman
 - powershell-core
 - python
 - rufus
@@ -73,7 +72,7 @@ Build Tools:
 
 # Tips
 ## Create symbolic links
-`New-Item -ItemType SymbolicLink -Path "C:\Users\saeed\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+`New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
 
 ## Manage pre-installed applications
 ### List
@@ -95,7 +94,7 @@ http://woshub.com/remove-appxpackage-0x80073cfa-removal-failed/
 ### Start bug.n on system startup
 You should put it's shortcut here:
 
-`C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+`C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
 To do that, type: Win+R and type: `shell:startup`
 
