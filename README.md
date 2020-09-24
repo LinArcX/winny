@@ -4,19 +4,25 @@
 - Switch to root of current partition: `cd /`
 - `cd %AppData%` won't work in powershell. You should use: `cd $env:APPDATA`
 - Default config folder (equivalent to `~/.config` in *nix-based os):
+
     `C:\Users\linarcx\AppData\Local`
 - Switch to it:
+
     `cd $env:LOCALAPPDATA`
 - To start an application at start-up, you should put it's shortcut here:
+
     `C:\Users\linarcx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
     To do that, hit: `Win+R` and type: `shell:startup`
 
 ## SymLinks, HardLinks, ShortCuts
 1. Create symlinks: 
+
 `new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
 
 For example:
+
 `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+
 `new-item -itemtype HardLink -path C:\Users\linarcx\AppData\Local\nvim\ -name init.vim -value C:\winny\.config\.nvim\init.vim`
 
 2. Create shortcut/alias(.lnk files):
@@ -216,6 +222,26 @@ Don't install these applications via chocolately:
 Don't install these apps ever:
 - steam
 
+
+# TODO
+## Packages
+Remove:
+- [ ] chromium
+- [ ] microsoft edge
+- [x] microsoft store
+
+Install via choco:
+- [ ] chrome
+- [ ] steam
+
+## Neovim Issue
+- [ ] can't go to end
+- [ ] can't go to start
+- [ ] numpad not working
+
+## Powershell
+- [ ] keep history after close a powershell terminal
+
 # References
 - https://www.thetopsites.net/article/54098567.shtml
 - https://miloserdov.org/?p=1839
@@ -240,7 +266,5 @@ Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
 - KB3035131  
 - KB3118401
 
-
 - FullScree current window:
 `mode 300`
-
