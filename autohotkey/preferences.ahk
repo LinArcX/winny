@@ -2,15 +2,15 @@
 ; maximize special windows
 SetTitleMatchMode, 2 ;A window's title can contain WinTitle anywhere inside
 
-GroupAdd, WinMaximize, ahk_class Notepad
 GroupAdd, WinMaximize, ahk_exe cmd.exe
-GroupAdd, WinMaximize, ahk_exe mspaint.exe
-GroupAdd, WinMaximize, ahk_exe explorer.exe
-GroupAdd, WinMaximize, ahk_exe Taskmgr.exe
+GroupAdd, WinMaximize, ahk_class Notepad
+;GroupAdd, WinMaximize, ahk_exe Taskmgr.exe
+;GroupAdd, WinMaximize, ahk_exe mspaint.exe
+;GroupAdd, WinMaximize, ahk_exe explorer.exe
 
+GroupAdd, WinMaximize, ahk_exe far.exe
 GroupAdd, WinMaximize, ahk_exe pwsh.exe
 GroupAdd, WinMaximize, ahk_exe nvim.exe
-GroupAdd, WinMaximize, ahk_exe far.exe
 GroupAdd, WinMaximize, ahk_exe uget.exe
 GroupAdd, WinMaximize, ahk_exe skype.exe
 GroupAdd, WinMaximize, ahk_exe firefox.exe
@@ -34,35 +34,30 @@ IfWinActive, ahk_group WinMaximize
 }
 Return
 
-; f=far
-!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
-#NoTrayIcon
+; ^ = Ctrl, ! = Alt, + = Shift, # = Win
++Up::WinMaximize, A
++Down::WinRestore, A
++Left::WinMinimize, A
 
-; b=firefox
-!b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
-#NoTrayIcon
-
-; e=nvim
-!e::run, "C:\tools\neovim\Neovim\bin\nvim.exe"
-#NoTrayIcon
-
-!p::
+#enter::
     run, "C:\Program Files\PowerShell\7\pwsh.exe"
     SetWorkingDir, D:\
 Return
 #NoTrayIcon
 
-run, "C:\Program Files\PowerShell\7\pwsh.exe"
+!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
+#NoTrayIcon
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;SendInput, {Esc}cls{Enter}
-;Send cls{Enter}
+!b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+#NoTrayIcon
 
-;!p::run, "C:\Program Files\PowerShell\7\pwsh.exe ; cd C:\"
-;+Up::WinMaximize, A
-;+Down::WinRestore, A
-;+Left::WinMinimize, A
+!e::run, "C:\tools\neovim\Neovim\bin\nvim.exe"
+#NoTrayIcon
 
-; disable win keys
+;---------- Garbage ----------;
 ;LWin::return
 ;RWin::return
+;Send cls{Enter}
+;SendInput, {Esc}cls{Enter}
+;run, "C:\Program Files\PowerShell\7\pwsh.exe"
+;!p::run, "C:\Program Files\PowerShell\7\pwsh.exe ; cd C:\"
