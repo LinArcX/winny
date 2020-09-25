@@ -1,13 +1,14 @@
 #---------- Initialize ----------#
 Set-PSReadlineKeyHandler -Key ctrl+q -Function ViExit
+Clear-Host
 
 $global:foregroundColor = 'white'
 $time = Get-Date
 $psVersion= $host.Version.Major
 $curUser= (Get-ChildItem Env:\USERNAME).Value
 $curComp= (Get-ChildItem Env:\COMPUTERNAME).Value
-Write-Host "Hello, $curUser! " -foregroundColor $foregroundColor -NoNewLine; Write-Host "$([char]9829) " -foregroundColor Red
-Write-Host "I am: $curComp" -foregroundColor Green
+#Write-Host "Hello, $curUser! " -foregroundColor $foregroundColor -NoNewLine; Write-Host "$([char]9829) " -foregroundColor Red
+#Write-Host "I am: $curComp" -foregroundColor Green
 
 function Prompt {
 	# Prompt Colors
@@ -172,6 +173,8 @@ function Set-MSVC-Environment {
     Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
 }
 Set-Alias sme Set-MSVC-Environment
+
+
 
 #---------------- Garbage ---------------#
 #function prompt { '' + (get-location) + '> '}

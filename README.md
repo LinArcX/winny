@@ -166,6 +166,7 @@ You can open it like this: `nvim $profile`
 - autohotkey
 - chocolatey
 - Far
+- FiraCode
 - Firefox
 - git
 - gsudo
