@@ -1,17 +1,9 @@
 #---------- Initialize ----------#
-Set-PSReadlineKeyHandler -Key ctrl+q -Function ViExit
 Clear-Host
-
-$global:foregroundColor = 'white'
-$time = Get-Date
-$psVersion= $host.Version.Major
-$curUser= (Get-ChildItem Env:\USERNAME).Value
-$curComp= (Get-ChildItem Env:\COMPUTERNAME).Value
-#Write-Host "Hello, $curUser! " -foregroundColor $foregroundColor -NoNewLine; Write-Host "$([char]9829) " -foregroundColor Red
-#Write-Host "I am: $curComp" -foregroundColor Green
+Set-PSReadlineKeyHandler -Key ctrl+q -Function ViExit
 
 function Prompt {
-	# Prompt Colors
+    # Prompt Colors
 	# Black DarkBlue DarkGreen DarkCyan DarkRed DarkMagenta DarkYellow
 	# Gray DarkGray Blue Green Cyan Red Magenta Yellow White
 
@@ -43,9 +35,9 @@ function Prompt {
 		$prompt_git_background = "DarkGreen"
 	}
 
-    $curtime = Get-Date
     $path = PWD
     Write-Host $path -foregroundColor $prompt_text -backgroundColor $prompt_background -NoNewLine
+
     if ($git_string){
     	Write-Host  "$([char]57520)" -foregroundColor $prompt_background -NoNewLine -backgroundColor $prompt_git_background
     	Write-Host  " $([char]57504) " -foregroundColor $prompt_git_text -backgroundColor $prompt_git_background -NoNewLine 	
@@ -55,9 +47,7 @@ function Prompt {
     else{
     	Write-Host  "$([char]57520)" -foregroundColor $prompt_background
     }
-
     Write-Host -NoNewLine ">" -foregroundColor Green 
-   
     $host.UI.RawUI.WindowTitle = "PS >> User: $curUser >> Current DIR: $((Get-Location).Path)"
     Return " "
 }
@@ -174,10 +164,17 @@ function Set-MSVC-Environment {
 }
 Set-Alias sme Set-MSVC-Environment
 
-
-
 #---------------- Garbage ---------------#
 #function prompt { '' + (get-location) + '> '}
+
+#$global:foregroundColor = 'white'
+#$time = Get-Date
+#$psVersion= $host.Version.Major
+#$curUser= (Get-ChildItem Env:\USERNAME).Value
+#$curComp= (Get-ChildItem Env:\COMPUTERNAME).Value
+#Write-Host "Hello, $curUser! " -foregroundColor $foregroundColor -NoNewLine; Write-Host "$([char]9829) " -foregroundColor Red
+#Write-Host "I am: $curComp" -foregroundColor Green
+#$curtime = Get-Date
 
 #Write-Host "Today is: $($time.ToLongDateString())"
 #Write-Host "Welcome to PowerShell version: $psVersion" -foregroundColor Green

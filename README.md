@@ -187,6 +187,10 @@ You can open it like this: `nvim $profile`
 - uget
 - unar
 
+## Not in chocolatey
+- fantasque-sans-ttf
+- vazir-ttf
+
 # Development
 ## C/C++ Development without VisualStudio
 First install these base packages via chocolatey:
