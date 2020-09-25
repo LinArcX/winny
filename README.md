@@ -108,7 +108,7 @@ You should install `pscx` package:
 ## Remove foo
 `Get-AppxPackage *foo* | Remove-AppxPackage`
 
-Tip: Some apps like microsoft-edge can't uninstall from your system and throw this error:
+Tip: Some apps like microsoft-edge or cortana can't uninstall from your system and throw this error:
 > Remove-AppxPackage: Deployment failed with HRESULT: 0x80073CFA, Removal failed. Please contact your software vendor. (0x80073CFA)
 error 0x80070032: AppX Deployment Remove operation on package Microsoft.MicrosoftEdge_44.18362.267.0_neutral__8wekyb3d8bbwe from: C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe failed.
 This app is part of Windows and cannot be uninstalled on a per-user basis.

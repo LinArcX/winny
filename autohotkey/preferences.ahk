@@ -3,14 +3,16 @@
 SetTitleMatchMode, 2 ;A window's title can contain WinTitle anywhere inside
 
 GroupAdd, WinMaximize, ahk_class Notepad
-GroupAdd, WinMaximize, ahk_exe explorer.exe
 GroupAdd, WinMaximize, ahk_exe cmd.exe
-GroupAdd, WinMaximize, ahk_exe skype.exe
+GroupAdd, WinMaximize, ahk_exe mspaint.exe
+GroupAdd, WinMaximize, ahk_exe explorer.exe
+GroupAdd, WinMaximize, ahk_exe Taskmgr.exe
 
 GroupAdd, WinMaximize, ahk_exe pwsh.exe
 GroupAdd, WinMaximize, ahk_exe nvim.exe
 GroupAdd, WinMaximize, ahk_exe far.exe
 GroupAdd, WinMaximize, ahk_exe uget.exe
+GroupAdd, WinMaximize, ahk_exe skype.exe
 GroupAdd, WinMaximize, ahk_exe firefox.exe
 GroupAdd, WinMaximize, ahk_exe musikcube.exe
 GroupAdd, WinMaximize, ahk_exe imageglass.exe
