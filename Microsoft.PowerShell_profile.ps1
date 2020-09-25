@@ -4,7 +4,7 @@ Set-PSReadlineKeyHandler -Key ctrl+q -Function ViExit
 
 function Prompt {
     # Prompt Colors
-	# Black DarkBlue DarkGreen DarkCyan DarkRed DarkMagenta DarkYellow
+    # Black DarkBlue DarkGreen DarkCyan DarkRed DarkMagenta DarkYellow
 	# Gray DarkGray Blue Green Cyan Red Magenta Yellow White
 
 	$prompt_text = "White"

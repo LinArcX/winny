@@ -233,35 +233,15 @@ Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
 
 # Alternatives
-- [ ] ranger
 - [ ] htop
-
-# Other
-Don't install these applications via chocolately:
-- cygwin
-- games
-
-Don't install these apps ever:
-- steam
+- [ ] ranger
+- [ ] dmenu
+- [ ] tmux
 
 # TODO
-## Packages
-Remove:
-- [ ] chromium
-- [ ] microsoft edge
-- [x] microsoft store
-
-Install via choco:
-- [ ] chrome
-- [ ] steam
-
 ## Neovim Issue
-- [ ] can't go to end
-- [ ] can't go to start
-- [ ] numpad not working
-
-## Powershell
-- [ ] keep history after close a powershell terminal
+- [ ] NumPad not working
+- [ ] can't go to Home/End
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml
