@@ -264,6 +264,7 @@ Install via choco:
 - https://github.com/git-for-windows/git/wiki/Symbolic-Links#allowing-non-administrators-to-create-symbolic-links
 - https://superuser.com/questions/327401/is-there-a-windows-command-line-with-smart-bash-like-autocompletions-command-h/327422
 - https://ss64.com/ps/syntax-env.html
+- https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8
 
 # Garbage
 - FullScree current window:
