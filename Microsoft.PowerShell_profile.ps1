@@ -154,7 +154,7 @@ function Choco-List {
 Set-Alias chl Choco-List
 
 function Choco-Upgrade {
-    choco upgrade all
+    gsudo choco upgrade all
 }
 Set-Alias chu Choco-Upgrade
 
