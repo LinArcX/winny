@@ -60,8 +60,3 @@ If(!(test-path $dest_mpv))
         New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\mpv\$RealPath -Target $FullPath
     }
 }
-
-#Write-Host "Done: $RealPath >> $FullPath"
-#Write-Host $_.FullName
-#Write-Host $RealPath
-#""

@@ -3,16 +3,12 @@
 SetTitleMatchMode, 2 ;A window's title can contain WinTitle anywhere inside
 
 GroupAdd, WinMaximize, ahk_exe cmd.exe
-GroupAdd, WinMaximize, ahk_class Notepad
-;GroupAdd, WinMaximize, ahk_exe Taskmgr.exe
-;GroupAdd, WinMaximize, ahk_exe mspaint.exe
-;GroupAdd, WinMaximize, ahk_exe explorer.exe
-
 GroupAdd, WinMaximize, ahk_exe far.exe
 GroupAdd, WinMaximize, ahk_exe pwsh.exe
 GroupAdd, WinMaximize, ahk_exe nvim.exe
 GroupAdd, WinMaximize, ahk_exe uget.exe
 GroupAdd, WinMaximize, ahk_exe skype.exe
+GroupAdd, WinMaximize, ahk_class Notepad
 GroupAdd, WinMaximize, ahk_exe firefox.exe
 GroupAdd, WinMaximize, ahk_exe musikcube.exe
 GroupAdd, WinMaximize, ahk_exe imageglass.exe
@@ -41,11 +37,11 @@ Return
 
 #enter::
     run, "C:\Program Files\PowerShell\7\pwsh.exe"
-    SetWorkingDir, C:\
+    SetWorkingDir, D:\
 Return
 #NoTrayIcon
 
-!f::run, "C:\Program Files\Far Manager\Far.exe \\"C:\\\" \\"D:\\\""
+!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
 #NoTrayIcon
 
 !b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
@@ -53,11 +49,3 @@ Return
 
 !e::run, "C:\tools\neovim\Neovim\bin\nvim.exe"
 #NoTrayIcon
-
-;---------- Garbage ----------;
-;LWin::return
-;RWin::return
-;Send cls{Enter}
-;SendInput, {Esc}cls{Enter}
-;run, "C:\Program Files\PowerShell\7\pwsh.exe"
-;!p::run, "C:\Program Files\PowerShell\7\pwsh.exe ; cd C:\"
