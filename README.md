@@ -180,7 +180,8 @@ You can open it like this: `nvim $profile`
 - musikcube
 - neovim
 - powershell-core
-- python
+- python2
+- python3
 - rufus
 - screencloud
 - skype
@@ -193,6 +194,9 @@ You can open it like this: `nvim $profile`
 ## Not in chocolatey
 - fantasque-sans-ttf
 - vazir-ttf
+`python.exe -m pip install --user --upgrade pynvim`
+`python3.exe -m pip install --user --upgrade pynvim`
+
 
 # Development
 ## C/C++ Development without VisualStudio

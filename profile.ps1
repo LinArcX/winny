@@ -67,31 +67,8 @@ function Invoke-CmdScript {
     }
 }
 
-function AssociateFileExtensions {
-    #if (-not (Test-Path $OpenAppPath))
-    #{
-    #   throw "$OpenAppPath does not exist."
-    #}
-    foreach ($extension in $FileExtensions)
-    {
-        $fileType = (cmd /c "assoc $extension")
-        $fileType = $fileType.Split("=")[-1]
-        cmd /c "ftype $fileType=""$OpenAppPath"" ""%1"""
-    }
-}
-
-function Create-Association($ext, $exe) {
-    $name = cmd /c "assoc $ext 2>NUL"
-    if ($name) { # Association already exists: override it
-        $name = $name.Split('=')[1]
-    } else { # Name doesn't exist: create it
-        $name = "$($ext.Replace('.',''))file" # ".log.1" becomes "log1file"
-        cmd /c 'assoc $ext=$name'
-    }
-    cmd /c "ftype $name=`"$exe`" `"%1`""
-}
-
 #---------- Windows ----------#
+Set-Alias whereis where.exe
 function Change-C {
     cd c:\
 }
@@ -169,3 +146,31 @@ Set-Alias sme Set-MSVC-Environment
 
 #new-alias grep findstr
 #New-Alias -Name "ch" choco
+#
+#function find ($string) {
+#   Get-ChildItem -Path 'c:\' -Recurse -Filter $string;
+#}
+#
+#function AssociateFileExtensions {
+#    #if (-not (Test-Path $OpenAppPath))
+#    #{
+#    #   throw "$OpenAppPath does not exist."
+#    #}
+#    foreach ($extension in $FileExtensions)
+#    {
+#        $fileType = (cmd /c "assoc $extension")
+#        $fileType = $fileType.Split("=")[-1]
+#        cmd /c "ftype $fileType=""$OpenAppPath"" ""%1"""
+#    }
+#}
+#
+#function Create-Association($ext, $exe) {
+#    $name = cmd /c "assoc $ext 2>NUL"
+#    if ($name) { # Association already exists: override it
+#        $name = $name.Split('=')[1]
+#    } else { # Name doesn't exist: create it
+#        $name = "$($ext.Replace('.',''))file" # ".log.1" becomes "log1file"
+#        cmd /c 'assoc $ext=$name'
+#    }
+#    cmd /c "ftype $name=`"$exe`" `"%1`""
+#}

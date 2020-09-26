@@ -27,6 +27,7 @@ set foldlevel=2
 "set shellquote=\"
 "set shellxquote=
 
+set shellquote="
 set shell=powershell shellquote=( shellpipe=\| shellxquote=
 set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
 set shellredir=\|\ Out-File\ -Encoding\ UTF8

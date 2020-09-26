@@ -1,5 +1,5 @@
 function! UpdateProfile()
-    :!
+    ":!
     ":set noet|retab!
 endfunction
 au BufWrite profile.ps1 call UpdateProfile()
