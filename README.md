@@ -16,17 +16,18 @@
     To do that, hit: `Win+R` and type: `shell:startup`
 
 ## SymLinks, HardLinks, ShortCuts
-- Create symlinks: 
+- Create symlinks:
 
     `new-item -itemtype SymbolicLink -path <path to location> -name <the name> -value <path to target>`
 
     For example:
 
-    `New-Item -itemtype HardLink -path $env:LOCALAPPDATA\nvim\ -name plugins.vim -value C:\winny\.config\.nvim\plugins.vim` 
-
-    Or:
-
     `New-Item -ItemType SymbolicLink -Path "C:\Users\linarcx\AppData\Local\nvim" -Name "init.lnk" -Value "init.vim"`
+
+- Create HardLinks:
+    `New-Item -itemtype HardLink -path $env:LOCALAPPDATA\nvim\ -name plugins.vim -value C:\winny\.config\.nvim\plugins.vim`
+
+Tip: To manage your dot-files, always use __SymbolicLink_.
 
 - Create shortcut/alias(.lnk files):
     Just paste this function inside your `$profile`:
@@ -100,7 +101,7 @@ Powershell is a shell, scripting language that has a package manager.
 ## Less
 You should install `pscx` package:
 
-`Find-Package pscx | Install-Package -Force -AllowClobber` 
+`Find-Package pscx | Install-Package -Force -AllowClobber`
 
 ## List of all installed packages
 `Get-AppxPackage | Select Name, PackageFullName`
@@ -112,7 +113,7 @@ Tip: Some apps like microsoft-edge or cortana can't uninstall from your system a
 > Remove-AppxPackage: Deployment failed with HRESULT: 0x80073CFA, Removal failed. Please contact your software vendor. (0x80073CFA)
 error 0x80070032: AppX Deployment Remove operation on package Microsoft.MicrosoftEdge_44.18362.267.0_neutral__8wekyb3d8bbwe from: C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe failed.
 This app is part of Windows and cannot be uninstalled on a per-user basis.
-An administrator can attempt to remove the app from the computer using Turn Windows Features on or off. However, it may not be possible to uninstall the app.                                                                          NOTE: For additional information, look for [ActivityId] e1738bb4-9178-0007-c48f-73e17891d601 in the Event Log or use the command line Get-AppPackageLog -ActivityID e1738bb4-9178-0007-c48f-73e17891d601 
+An administrator can attempt to remove the app from the computer using Turn Windows Features on or off. However, it may not be possible to uninstall the app.                                                                          NOTE: For additional information, look for [ActivityId] e1738bb4-9178-0007-c48f-73e17891d601 in the Event Log or use the command line Get-AppPackageLog -ActivityID e1738bb4-9178-0007-c48f-73e17891d601
 
 The workaround:
 http://woshub.com/remove-appxpackage-0x80073cfa-removal-failed/
