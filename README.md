@@ -1,8 +1,8 @@
 # Windows Basics
 - Default user directory: `C:\Users\<user-name>`
-- Switch to it: `cd ~`
-- Switch to root of current partition: `cd /`
-- `cd %AppData%` won't work in powershell. You should use: `cd $env:APPDATA`
+- Switch to it: `cd ~` or `cd`
+- Switch to root of current drive: `cd /`
+- `cd %AppData%` just work in cmd. In powershell, you should use: `cd $env:APPDATA`
 - Default config folder (equivalent to `~/.config` in __*nix-based__ os):
 
     `C:\Users\linarcx\AppData\Local`
