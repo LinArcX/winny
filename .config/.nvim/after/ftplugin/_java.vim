@@ -6,7 +6,7 @@
 "function JavaStartDebug()
 "  call CocActionAsync('runCommand', 'vscode.java.startDebugSession', function('JavaStartDebugCallback'))
 "endfunction
-"
+" 
 "" d
 "call quickui#menu#install('Java', [
 "            \ [ '&debug', "call JavaStartDebug()" ],

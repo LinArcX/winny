@@ -9,7 +9,7 @@ set smartindent
 set shiftwidth=4     " Set shiftwidth to control how many columns text is indented with the reindent operations (<< and >>) and automatic C-style indentation.
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4    
+set softtabstop=4
 set expandtab        " When expandtab is set, hitting Tab in insert mode will produce the appropriate number of spaces.
 
 syntax off
@@ -107,4 +107,3 @@ inoremap <s-tab> <c-n>
 
 hi Search cterm=NONE ctermfg=white ctermbg=blue
 hi Visual cterm=NONE ctermfg=white ctermbg=blue
-

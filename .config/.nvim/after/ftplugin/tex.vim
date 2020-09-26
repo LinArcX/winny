@@ -9,3 +9,5 @@ call quickui#menu#install('&Tex', [
             \ [ '&preview', ":LLPStartPreview" ],
             \ [ '&build', "call BuildTexFile()" ],
             \ ], '<auto>', 'tex')
+
+"
