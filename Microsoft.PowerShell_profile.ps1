@@ -9,9 +9,9 @@ function Prompt {
 
 	$prompt_text = "White"
 	$prompt_background = "DarkMagenta"
-	$prompt_git_background = "Yellow"	
-	$prompt_git_text = "Black"	
-	
+	$prompt_git_background = "Yellow"
+	$prompt_git_text = "Black"
+
 	# Grab Git Branch
 	$git_string = "";
 	git branch | foreach {
@@ -19,18 +19,18 @@ function Prompt {
 			$git_string += $matches[1]
 		}
 	}
-	
+
 	# Grab Git Status
 	$git_status = "";
 	git status --porcelain | foreach {
 		$git_status = $_ #just replace other wise it will be empty
 	}
-	
+
 	if (!$git_string)	{
 		$prompt_text = "White"
 		$prompt_background = "DarkMagenta"
 	}
-	
+
 	if ($git_status){
 		$prompt_git_background = "DarkGreen"
 	}
@@ -40,14 +40,14 @@ function Prompt {
 
     if ($git_string){
     	Write-Host  "$([char]57520)" -foregroundColor $prompt_background -NoNewLine -backgroundColor $prompt_git_background
-    	Write-Host  " $([char]57504) " -foregroundColor $prompt_git_text -backgroundColor $prompt_git_background -NoNewLine 	
+    	Write-Host  " $([char]57504) " -foregroundColor $prompt_git_text -backgroundColor $prompt_git_background -NoNewLine
     	Write-Host ($git_string)  -NoNewLine -foregroundColor $prompt_git_text -backgroundColor $prompt_git_background
-    	Write-Host  "$([char]57520)" -foregroundColor $prompt_git_background 
+    	Write-Host  "$([char]57520)" -foregroundColor $prompt_git_background
     }
     else{
     	Write-Host  "$([char]57520)" -foregroundColor $prompt_background
     }
-    Write-Host -NoNewLine ">" -foregroundColor Green 
+    Write-Host -NoNewLine ">" -foregroundColor Green
     $host.UI.RawUI.WindowTitle = "PS >> User: $curUser >> Current DIR: $((Get-Location).Path)"
     Return " "
 }
@@ -65,18 +65,6 @@ function Invoke-CmdScript {
         $varValue = $_.Matches[0].Groups[2].Value
         Set-Item Env:$varName $varValue
     }
-}
-
-function Set-Shortcut {
-    param ( 
-        [string]$SourceLnk,
-        [string]$DestinationPath
-    )
-
-    $WshShell = New-Object -comObject WScript.Shell
-    $Shortcut = $WshShell.CreateShortcut($SourceLnk)
-    $Shortcut.TargetPath = $DestinationPath
-    $Shortcut.Save()
 }
 
 #---------- Windows ----------#
@@ -113,16 +101,11 @@ function Get-History {
 }
 Set-Alias history Get-History
 
-function Update-Profile {
-    Set-Shortcut "D:\winny\profile.lnk" "C:\Users\saeed\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-}
-Set-Alias up Update-Profile
-
 #---------- Git ----------#
 function Git-Status {
     git status
 }
-Set-Alias gis Git-Status 
+Set-Alias gis Git-Status
 
 function Git-Diff {
     git diff

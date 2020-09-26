@@ -3,6 +3,8 @@
 - Switch to it: `cd ~` or `cd`
 - Switch to root of current drive: `cd /`
 - `cd %AppData%` just work in cmd. In powershell, you should use: `cd $env:APPDATA`
+- To power-off the computer: `shutdown /p` or Stop-Computer
+- To restart the computer: `shutdown /r` or Restart-Computer
 - Default config folder (equivalent to `~/.config` in __*nix-based__ os):
 
     `C:\Users\linarcx\AppData\Local`
@@ -234,15 +236,20 @@ Build Tools:
 `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools`
 
 # Alternatives
-- [ ] htop
-- [ ] ranger
-- [ ] dmenu
-- [ ] tmux
+- htop
+- ranger
+- dmenu
+- tmux
 
 # TODO
 ## Neovim Issue
-- [ ] NumPad not working
-- [ ] can't go to Home/End
+- NumPad not working
+- can't go to Home/End
+- mousepad not working
+- icons not showing.
+
+## Windows
+- Set default apps and extensions like mimeapps in linux via powershell.
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml
