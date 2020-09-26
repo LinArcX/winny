@@ -31,23 +31,6 @@
 
 Tip: To manage your dot-files, always use __SymbolicLink_.
 
-- Create shortcut/alias(.lnk files):
-    Just paste this function inside your `$profile`:
-
-    ```
-    function set-shortcut {
-    param ( [string]$SourceLnk, [string]$DestinationPath )
-        $WshShell = New-Object -comObject WScript.Shell
-        $Shortcut = $WshShell.CreateShortcut($SourceLnk)
-        $Shortcut.TargetPath = $DestinationPath
-        $Shortcut.Save()
-    }
-    ```
-
-    And use it like this:
-
-    `set-shortcut "D:\winny\profile.lnk" "C:\Users\linarcx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"`
-
 ## Services
 Search for a service:
 `Get-Service  | grep Event`
@@ -163,40 +146,9 @@ You can open it like this: `nvim $profile`
     To copy the screen buffer to the Clipboard, right-click, choose Select, and then press Enter.
 - `Tab / Shift+Tab`: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
 
-# Applications
-## Necessary
-- 7zip
-- autohotkey
-- chocolatey
-- Far
-- FiraCode
-- Firefox
-- git
-- gsudo
-- imageglass
-- lavfilters
-- libreoffice-fresh
-- mpv
-- musikcube
-- neovim
-- powershell-core
-- python2
-- python3
-- rufus
-- screencloud
-- skype
-- sqlitebrowser
-- sumatrapdf
-- transmission
-- uget
-- unar
-
 ## Not in chocolatey
 - fantasque-sans-ttf
 - vazir-ttf
-`python.exe -m pip install --user --upgrade pynvim`
-`python3.exe -m pip install --user --upgrade pynvim`
-
 
 # Development
 ## C/C++ Development without VisualStudio
@@ -256,6 +208,7 @@ Build Tools:
 - Bind Ctrl+a, BackSpace to Ctrl+k.
 - Set startup apps here: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` via powershell.
 - Install apps via bootstrap.
+- Manage tor via services(aliases)
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml

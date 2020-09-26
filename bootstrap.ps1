@@ -5,6 +5,19 @@ write-host "Welcome to bootstrapper!"
 write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDATA: $env:LOCALAPPDATA"
 ""
 
+# Remove Pre-Installed pacakge from windows
+# Install drivers
+# Install chocolatey, gsudo first
+write-host -ForegroundColor DarkGreen ">>> Installing packages via choco"
+gsudo choco install 7zip autohotkey unar lavfilters
+gsudo choco install Far mpv musikcube screencloud sumatrapdf imageglass libreoffice-fresh rufus
+gsudo choco install git powershell-core sqlitebrowser python2 python3
+gsudo choco install neovim --pre
+gsudo choco install transmission uget Firefox
+gsudo choco install FiraCode
+
+gsudo choco install visualstudio-installer visualstudio2019community visualstudio2019buildtools visualstudio2019-workload-vctools windows-sdk-10
+
 $dest_nvim = "$env:LOCALAPPDATA\nvim"
 If(!(test-path $dest_nvim))
 {
