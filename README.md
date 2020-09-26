@@ -247,17 +247,12 @@ Build Tools:
 
 # TODO
 ## Neovim Issue
-- NumPad not working
-- Home/End keys not working.
-- Mousepad not working
 - Icons doesn't appear.
 
 ## Windows
 - Set default apps and extensions like mimeapps in linux via powershell.
 - Alt-F4 not working to close windows.(use alt+q instead!)
 - Disable Ctrl+alt+arrow keys.
-- Everytime Microsoft.PowerShell_profile.ps1 changed, update it's main location also.
-- Everytime autohotkey/preferences changed,it's main file should update.
 - Bind Ctrl+a, BackSpace to Ctrl+k.
 
 # References
