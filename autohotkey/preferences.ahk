@@ -41,11 +41,11 @@ Return
 
 #enter::
     run, "C:\Program Files\PowerShell\7\pwsh.exe"
-    SetWorkingDir, D:\
+    SetWorkingDir, C:\
 Return
 #NoTrayIcon
 
-!f::run, "C:\Program Files\Far Manager\Far.exe \\"D:\\\" \\"E:\\\""
+!f::run, "C:\Program Files\Far Manager\Far.exe \\"C:\\\" \\"D:\\\""
 #NoTrayIcon
 
 !b::run, "C:\Program Files\Mozilla Firefox\firefox.exe"
