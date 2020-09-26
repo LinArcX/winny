@@ -10,6 +10,3 @@ runtime functions/bufonly.vim
 runtime configs.vim
 runtime plugins.vim
 runtime shortcuts.vim
-
-"ource C:\winny\.config\.nvim\shortcuts.vim
-"runtime C:\winny\.config\.nvim\shortcuts.vim
