@@ -254,6 +254,8 @@ Build Tools:
 - Alt-F4 not working to close windows.(use alt+q instead!)
 - Disable Ctrl+alt+arrow keys.
 - Bind Ctrl+a, BackSpace to Ctrl+k.
+- Set startup apps here: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` via powershell.
+- Install apps via bootstrap.
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml

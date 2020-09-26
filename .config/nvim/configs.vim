@@ -22,16 +22,6 @@ set foldnestmax=10
 set foldenable
 set foldlevel=2
 
-"set shell=powershell
-"set shellcmdflag=-command
-"set shellquote=\"
-"set shellxquote=
-
-"set shellquote="
-"set shell=powershell shellquote=( shellpipe=\| shellxquote=
-"set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
-"set shellredir=\|\ Out-File\ -Encoding\ UTF8
-
 set exrc
 "set secure
 set number           " Display Relative line numbers
@@ -121,3 +111,13 @@ hi Visual cterm=NONE ctermfg=white ctermbg=blue
 "set shell=pwsh.exe
 "set shell=powershell
 "set shellcmdflag=-command
+
+"set shell=powershell
+"set shellcmdflag=-command
+"set shellquote=\"
+"set shellxquote=
+
+"set shellquote="
+"set shell=powershell shellquote=( shellpipe=\| shellxquote=
+"set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+"set shellredir=\|\ Out-File\ -Encoding\ UTF8
