@@ -22,8 +22,17 @@ set foldnestmax=10
 set foldenable
 set foldlevel=2
 
+"set shell=powershell
+"set shellcmdflag=-c
+"set shellquote=\"
+"set shellxquote=
+
+set shell=powershell shellquote=( shellpipe=\| shellxquote=
+set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+set shellredir=\|\ Out-File\ -Encoding\ UTF8
+
 set exrc
-set secure
+"set secure
 set number           " Display Relative line numbers
 set nowrap           " Don't Wrap lines!
 set hidden
@@ -107,3 +116,7 @@ inoremap <s-tab> <c-n>
 
 hi Search cterm=NONE ctermfg=white ctermbg=blue
 hi Visual cterm=NONE ctermfg=white ctermbg=blue
+
+"set shell=pwsh.exe
+"set shell=powershell
+"set shellcmdflag=-command
