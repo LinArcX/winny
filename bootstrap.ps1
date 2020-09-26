@@ -6,12 +6,11 @@ write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDA
 ""
 
 $dest_nvim = "$env:LOCALAPPDATA\nvim"
-write-host ">>> Copying neovim configs to $dest_nvim"
-""
 If(!(test-path $dest_nvim))
 {
-    New-Item -ItemType Directory -Path $dest_nvim
+    write-host -ForegroundColor DarkGreen ">>> Copying neovim configs to $dest_nvim"
 
+    New-Item -ItemType Directory -Path $dest_nvim
     If(!(test-path $dest_nvim\plugin))
     {
         New-Item -ItemType Directory -Path $dest_nvim\plugin
@@ -32,16 +31,37 @@ If(!(test-path $dest_nvim))
     {
         New-Item -ItemType Directory -Path $dest_nvim\after\ftplugin
     }
-
-    get-childitem ".config\.nvim" -recurse | where {$_.extension -eq ".vim"} | % {
+    get-childitem ".config\nvim" -recurse | where {$_.extension -eq ".vim"} | % {
         $FullPath = $_.FullName
-        $PathArray = $_.FullName -split ".nvim\\"
-	    $RealPath = $PathArray[1]
+        $PathArray = $_.FullName -split "nvim\\"
+        $RealPath = $PathArray[1]
         New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\$RealPath -Target $FullPath
-
-        Write-Host $_.BaseName
-        Write-Host $_.FullName
-        Write-Host $RealPath
-        ""
     }
 }
+
+$dest_mpv = "$env:LOCALAPPDATA\mpv"
+If(!(test-path $dest_mpv))
+{
+    write-host -ForegroundColor DarkGreen ">>> Copying mpv configs to $dest_mpv"
+
+    New-Item -ItemType Directory -Path $dest_mpv
+    If(!(test-path $dest_mpv\script-opts))
+    {
+        New-Item -ItemType Directory -Path $dest_mpv\script-opts
+    }
+    If(!(test-path $dest_mpv\scripts))
+    {
+        New-Item -ItemType Directory -Path $dest_mpv\scripts
+    }
+    get-childitem ".config\mpv" -recurse | where { ($_.extension -eq ".conf") -or ($_.extension -eq ".lua") } | % {
+        $FullPath = $_.FullName
+        $PathArray = $_.FullName -split "mpv\\"
+        $RealPath = $PathArray[1]
+        New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\mpv\$RealPath -Target $FullPath
+    }
+}
+
+#Write-Host "Done: $RealPath >> $FullPath"
+#Write-Host $_.FullName
+#Write-Host $RealPath
+#""
