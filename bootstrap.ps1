@@ -5,8 +5,9 @@ write-host "Welcome to bootstrapper!"
 write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDATA: $env:LOCALAPPDATA"
 ""
 
-# Create Directory
 $dest_nvim = "$env:LOCALAPPDATA\nvim"
+write-host ">>> Copying neovim configs to $dest_nvim"
+""
 If(!(test-path $dest_nvim))
 {
     New-Item -ItemType Directory -Path $dest_nvim
@@ -33,31 +34,14 @@ If(!(test-path $dest_nvim))
     }
 
     get-childitem ".config\.nvim" -recurse | where {$_.extension -eq ".vim"} | % {
-        $FullPath = $_.FullName 
-        $RealPath = $_.FullName -split ".nvim\\" 
-        #New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\$RealPath[1] -Target $FullPath
+        $FullPath = $_.FullName
+        $PathArray = $_.FullName -split ".nvim\\"
+	    $RealPath = $PathArray[1]
+        New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\$RealPath -Target $FullPath
 
         Write-Host $_.BaseName
         Write-Host $_.FullName
-        Write-Host $RealPath[1]
+        Write-Host $RealPath
         ""
-        #$MyPath = "C:\winny\.config\.nvim\init.vim"
-        #New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim\$real_path[1] -Target $_.FullName
     }
 }
-
-#new-item -itemtype SymbolicLink -path $env:LOCALAPPDATA\nvim -value C:\winny\.config\.nvim\plugin\vim_session.vim
-#$source_nvim = "C:\winny\.config\.nvim"
-#Dir -Recurse $source_nvim | Get-Childitem
-#Get-ChildItem $source_nvim -Filter *.vim | 
-#Foreach-Object {
-#	$content = Get-Content $_.FullName
-#
-#	#write-host $content
-#	Get-ChildItem $source_nvim | select BaseName
-#	
-#        # filter and save content to the original file
-#	# $content | Where-Object {$_ -match 'step[49]'} | Set-Content $_.FullName
-#	# filter and save content to a new file 
-#	# $content | Where-Object {$_ -match 'step[49]'} | Set-Content ($_.BaseName + '_out.log')
-#}
