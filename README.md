@@ -248,24 +248,26 @@ Ctrl + Alt + Tab 	View open apps.
 - "\": Open the Windows 10 drive.
 - ".": Open the Home folder of the current user.
 - "..": Open the Users folder.
-- "control": Open Control Panel.
-- "regedit": Registry Editor.
-- "msconfig": Open System Configuration.
 - "appwiz.cpl": Open Programs and Features.
-- "resmon": Open Resource Monitor.
-- "main.cpl": Adjust your mouse settings.
-- "mstsc": Open Remote Desktop.
-- "msinfo32": Access System Information.
 - "compmgmt.msc": The Computer Management app.
+- "control": Open Control Panel.
+- "devmgmt.msc": Windows Device Manager.
 - "eventvwr.msc": Windows Event Viewer.
-- "netplwiz": Advanced User Accounts window.
+- "firewall.cpl": Windows Firewall.
 - "gpedit.msc": Group Policy Editor in Windows.
+- "resmon": Open Resource Monitor.
 - "lusrmgr.msc": Local Users and Groups Manager.
+- "main.cpl": Adjust your mouse settings.
 - "mrt": Malicious software removal tool.
+- "msconfig": Open System Configuration.
+- "msinfo32": Access System Information.
+- "mstsc": Open Remote Desktop.
 - "ncpa.cpl": Access all your Network Adapters.
+- "netplwiz": Advanced User Accounts window.
+- "regedit": Registry Editor.
 - "perfmon.msc": Performance monitor.
 - "powercfg.cpl": Power Options.
-- "devmgmt.msc": Windows Device Manager.
+- "sysdm.cp": System Properties window.
 
 - "services.msc": Open services window.
 - "shell:startup": Open startup folder.
@@ -279,3 +281,4 @@ Ctrl + Alt + Tab 	View open apps.
 - https://ss64.com/ps/syntax-env.html
 - https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8
 - https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
+- https://www.maketecheasier.com/20-run-commands-windows/
