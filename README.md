@@ -211,6 +211,33 @@ Build Tools:
 - Set Environtment variables from powershell.
 - Environtment variables not seen after setting.(You should poweroff computer to see it.)
 - Use torify
+- Sort choco package by latest install date
+- Set keybinding to open regedit, window
+
+# Windows shortcuts
+Windows key + I 	Open Settings app.
+Windows key + E 	Open File Explorer.
+Windows key + A 	Open Action center.
+Windows key + D 	Display and hide the desktop.
+Windows key + L 	Lock device.
+Windows key + V 	Open Clipboard bin.
+Windows key + X 	Quick Link menu.
+Windows key + X + a CMD.
+Windows key + Period (.) or semicolon (;) 	Open emoji panel.
+Windows key + PrtScn 	Capture full screenshot in the "Screenshots" folder.
+Windows key + Shift + S 	Capture part of the screen with Snip & Sketch.
+Windows key + Left arrow key 	Snap app or window left.
+Windows key + Right arrow key 	Snap app or window right.
+
+Ctrl + Shift + Esc 	Open Task Manager.
+Ctrl + Alt + Tab 	View open apps.
+
+# Run commands
+Open startup folder:
+`shell:startup`
+
+Open RecycleBin:
+`shell:RecycleBinFolder`
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml

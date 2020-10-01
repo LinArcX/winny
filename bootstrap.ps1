@@ -9,15 +9,15 @@ write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDA
 # Install drivers
 # Install these first: chocolatey, gsudo
 # Recommanded: rufus, libreoffice-fresh, unzip, transmission, python2, python3
+# Garbage: screencloud(in favor of built-in capability in windows 10), FiraCode
 # Not in chocolatey: fantasque-sans-ttf, vazir-ttf
 
 write-host -ForegroundColor DarkGreen ">>> Installing packages via choco"
 gsudo choco install 7zip autohotkey unar lavfilters
-gsudo choco install Far mpv musikcube screencloud sumatrapdf imageglass
+gsudo choco install Far mpv musikcube sumatrapdf imageglass
 gsudo choco install git powershell-core ripgrep sqlitebrowser
 gsudo choco install neovim --pre
 gsudo choco install Firefox uget
-gsudo choco install FiraCode
 
 gsudo choco install visualstudio-installer visualstudio2019community visualstudio2019buildtools visualstudio2019-workload-vctools windows-sdk-10
 
