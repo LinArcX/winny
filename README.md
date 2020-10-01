@@ -197,6 +197,10 @@ Build Tools:
 - dmenu
 - tmux
 
+# Should be in windows
+- zathura
+- translate-shell
+
 # TODO
 ## Neovim Issue
 - Icons doesn't appear.
@@ -208,6 +212,8 @@ Build Tools:
 - Bind Ctrl+a, BackSpace to Ctrl+k.
 - Set startup apps here: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` via powershell.
 - Manage tor via services(aliases)
+- Set Environtment variables from powershell.
+- Environtment variables not seen after setting.(You should poweroff computer to see it.)
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml

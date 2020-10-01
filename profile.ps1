@@ -94,6 +94,11 @@ function Get-Env {
 }
 Set-Alias env Get-Env
 
+function Path-Splited {
+    $env:Path -split ';'
+}
+Set-Alias envPath Path-Splited
+
 function Get-History {
     $h = [System.Environment]::ExpandEnvironmentVariables("%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt")
     cat $h | select -Last 100
