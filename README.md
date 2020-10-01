@@ -146,10 +146,6 @@ You can open it like this: `nvim $profile`
     To copy the screen buffer to the Clipboard, right-click, choose Select, and then press Enter.
 - `Tab / Shift+Tab`: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
 
-## Not in chocolatey
-- fantasque-sans-ttf
-- vazir-ttf
-
 # Development
 ## C/C++ Development without VisualStudio
 First install these base packages via chocolatey:
@@ -214,6 +210,7 @@ Build Tools:
 - Manage tor via services(aliases)
 - Set Environtment variables from powershell.
 - Environtment variables not seen after setting.(You should poweroff computer to see it.)
+- Use torify
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml
