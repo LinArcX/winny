@@ -207,7 +207,6 @@ Build Tools:
 - Disable Ctrl+alt+arrow keys.
 - Bind Ctrl+a, BackSpace to Ctrl+k.
 - Set startup apps here: `C:\Users\saeed\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` via powershell.
-- Install apps via bootstrap.
 - Manage tor via services(aliases)
 
 # References
