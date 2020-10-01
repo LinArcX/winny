@@ -218,7 +218,13 @@ Build Tools:
 Windows key + I 	Open Settings app.
 Windows key + E 	Open File Explorer.
 Windows key + D 	Display and hide the desktop.
+Windows key + M 	Minimize all windows.
+Windows key + Shift + M Restore minimized windows on the desktop.
 Windows key + L 	Lock device.
+Windows key + W 	Open the Windows Ink Workspace.
+Windows key + Plus (+) 	Zoom in using the magnifier.
+Windows key + Minus (-) 	Zoom out using the magnifier.
+Windows key + Esc 	Exit magnifier.
 Windows key + X 	Quick Link menu.
 Windows key + X + a Open default PowerShell.
 Windows key + PrtScn 	Capture full screenshot in the "Screenshots" folder.
@@ -229,21 +235,41 @@ Windows key + Right arrow key 	Snap app or window right.
 Windows key + V 	Open Clipboard bin.
 Windows key + A 	Open Action center.
 
+Windows key + Tab 	Open Task View.
+Windows key + Ctrl + D 	Create a virtual desktop.
+Windows key + Ctrl + F4 	Close active virtual desktop.
+Windows key + Ctrl + Right arrow 	Switch to the virtual desktop on the right.
+Windows key + Ctrl + Left arrow 	Switch to the virtual desktop on the left.
+
 Ctrl + Shift + Esc 	Open Task Manager.
 Ctrl + Alt + Tab 	View open apps.
 
 # Run commands
-Open startup folder:
-`shell:startup`
+- "\": Open the Windows 10 drive.
+- ".": Open the Home folder of the current user.
+- "..": Open the Users folder.
+- "control": Open Control Panel.
+- "regedit": Registry Editor.
+- "msconfig": Open System Configuration.
+- "appwiz.cpl": Open Programs and Features.
+- "resmon": Open Resource Monitor.
+- "main.cpl": Adjust your mouse settings.
+- "mstsc": Open Remote Desktop.
+- "msinfo32": Access System Information.
+- "compmgmt.msc": The Computer Management app.
+- "eventvwr.msc": Windows Event Viewer.
+- "netplwiz": Advanced User Accounts window.
+- "gpedit.msc": Group Policy Editor in Windows.
+- "lusrmgr.msc": Local Users and Groups Manager.
+- "mrt": Malicious software removal tool.
+- "ncpa.cpl": Access all your Network Adapters.
+- "perfmon.msc": Performance monitor.
+- "powercfg.cpl": Power Options.
+- "devmgmt.msc": Windows Device Manager.
 
-Open RecycleBin:
-`shell:RecycleBinFolder`
-
-Open compute config window:
-`msconfig`
-
-Open services window:
-`services.msc`
+- "services.msc": Open services window.
+- "shell:startup": Open startup folder.
+- "shell:RecycleBinFolder": Open RecycleBin.
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml
@@ -252,3 +278,4 @@ Open services window:
 - https://superuser.com/questions/327401/is-there-a-windows-command-line-with-smart-bash-like-autocompletions-command-h/327422
 - https://ss64.com/ps/syntax-env.html
 - https://medium.com/@vhanla/agnoster-like-theme-for-powershell-95d257ba9ba8
+- https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
