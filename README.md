@@ -251,6 +251,7 @@ Ctrl + Alt + Tab 	View open apps.
 - "appwiz.cpl": Open Programs and Features.
 - "compmgmt.msc": The Computer Management app.
 - "control": Open Control Panel.
+- "dcomcnfg": Component Services.
 - "devmgmt.msc": Windows Device Manager.
 - "eventvwr.msc": Windows Event Viewer.
 - "firewall.cpl": Windows Firewall.
@@ -267,11 +268,11 @@ Ctrl + Alt + Tab 	View open apps.
 - "regedit": Registry Editor.
 - "perfmon.msc": Performance monitor.
 - "powercfg.cpl": Power Options.
-- "sysdm.cp": System Properties window.
-
 - "services.msc": Open services window.
 - "shell:startup": Open startup folder.
 - "shell:RecycleBinFolder": Open RecycleBin.
+- "sysdm.cp": System Properties window.
+- "timedate.cpl": Date and Time Properties Properties.
 
 # References
 - https://www.thetopsites.net/article/54098567.shtml
