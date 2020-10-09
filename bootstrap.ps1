@@ -15,7 +15,7 @@ write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDA
 write-host -ForegroundColor DarkGreen ">>> Installing packages via choco"
 gsudo choco install 7zip autohotkey unar lavfilters
 gsudo choco install Far mpv musikcube okular imageglass
-gsudo choco install git powershell-core ripgrep sqlitebrowser
+gsudo choco install git openssh powershell-core ripgrep sqlitebrowser
 gsudo choco install neovim --pre
 gsudo choco install Firefox uget
 

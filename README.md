@@ -147,6 +147,18 @@ You can open it like this: `nvim $profile`
 - `Tab / Shift+Tab`: Press the Tab key or press Shift+Tab to access the tab expansion function, which include folder or filename autocompletion.
 
 # Development
+## Setup git
+First install openssh:
+`gsudo choco install openssh`
+
+Then generate a rsa key:
+`ssh-keygen -t rsa -b 2048 -C "email@example.com"`
+
+It'll create two files: __id_rsa__ and __id_rsa.pub__.
+Open id_rsa.pub and copy it's content into your git account in ssh part.
+
+https://docs.gitlab.com/ee/ssh/
+
 ## C/C++ Development without VisualStudio
 First install these base packages via chocolatey:
 
