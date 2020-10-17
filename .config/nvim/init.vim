@@ -10,3 +10,5 @@ runtime functions/bufonly.vim
 runtime configs.vim
 runtime plugins.vim
 runtime shortcuts.vim
+
+colorscheme monokai

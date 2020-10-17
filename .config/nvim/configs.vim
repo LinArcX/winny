@@ -108,6 +108,9 @@ inoremap <s-tab> <c-n>
 hi Search cterm=NONE ctermfg=white ctermbg=blue
 hi Visual cterm=NONE ctermfg=white ctermbg=blue
 
+"syntax on
+":colorscheme monokai
+
 "set shell=pwsh.exe
 "set shell=powershell
 "set shellcmdflag=-command
