@@ -5,17 +5,18 @@ write-host "Welcome to bootstrapper!"
 write-host "USERPROFILE: $env:USERPROFILE"`n"APPDATA: $env:APPDATA"`n"LOCALAPPDATA: $env:LOCALAPPDATA"
 ""
 
-# Remove Pre-Installed pacakge from windows
-# Install drivers
-# Install these first: chocolatey, gsudo
-# Recommanded: rufus, libreoffice-fresh, unzip, transmission, python2, python3
-# Garbage: screencloud(in favor of built-in capability in windows 10), FiraCode
+# 1. Remove Pre-Installed pacakge from windows.
+# 2. Install drivers.
+# 3. Install chocolatey, gsudo.
 # Not in chocolatey: fantasque-sans-ttf, vazir-ttf
+# Recommanded: rufus, libreoffice-fresh, unzip, transmission, python2, python3
+# Garbages: screencloud(in favor of built-in capability in windows 10), FiraCode
+# Interesting packages: WinDivert, proxifier, Dr. Memory, JTracer
 
 write-host -ForegroundColor DarkGreen ">>> Installing packages via choco"
 gsudo choco install 7zip autohotkey unar lavfilters
 gsudo choco install Far mpv musikcube okular imageglass
-gsudo choco install git openssh powershell-core ripgrep sqlitebrowser
+gsudo choco install git openssh powershell-core ripgrep llvm mingw dependencywalker sqlitebrowser
 gsudo choco install neovim --pre
 gsudo choco install Firefox uget
 
