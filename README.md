@@ -306,6 +306,15 @@ Ctrl + Alt + Tab 	View open apps.
 gsudo choco install wsl2 wsl-archlinux
 ```
 
+# Export/Import env
+Export:
+
+`SET >> allvariables.txt`
+
+Import:
+
+`C:\> for /F %A in (allvariables.txt) do SET %A`
+
 # References
 - https://www.thetopsites.net/article/54098567.shtml
 - https://miloserdov.org/?p=1839
